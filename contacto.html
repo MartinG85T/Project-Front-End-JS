@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fuentes de Google: League Spartan, Montserrat y Quicksand-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet">
+    <title>SportShoes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class= "container"> 
+
+        <header>
+            <img class= "zapatillas_titulo"src="Images/icono-zapatillas.jpg" alt="zapatilla">
+            <h1>SportShoes</h1>
+        </header>
+    
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    
+        <main>
+            <section id="contact">
+                <h2>Contacto</h2>
+                <p>Puedes contactarnos a través del siguiente formulario:</p>
+                <form action="https://formspree.io/f/mqakbwkr" method="POST">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required style="border-radius: 10px;">
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required style="border-radius: 10px;">
+            
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required style="border-radius: 10px;">
+            
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required style="border-radius: 10px;"></textarea>
+            
+                    <div class="form-buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </section>
+            <div class="map-container">
+                <h2>Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14241.375634858836!2d-65.20305552386858!3d-26.82901180872183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1731620733131!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+           
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 SportShoes. Todos los derechos reservados.</p>
+        </footer>
+    
+    </div>
+
+   
+</body>
+</html>
