@@ -21,4 +21,3 @@ fetch('https://dolarapi.com/v1/dolares')
     });    
 
 })
-
