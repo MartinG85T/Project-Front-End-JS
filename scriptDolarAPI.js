@@ -13,8 +13,8 @@ fetch('https://dolarapi.com/v1/dolares')
     
         contenedorCreado.innerHTML = `
             <h3>${elemento.nombre}</h3>
-            <p>Precio de Compra: ${elemento.compra}</p>
-            <p>Precio de Venta: ${elemento.venta}</p>
+            <p>Precio de Compra: $${elemento.compra}</p>
+            <p>Precio de Venta: $${elemento.venta}</p>
         `;
     
         contenedorDolar.append(contenedorCreado);
