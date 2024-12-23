@@ -43,7 +43,7 @@ header h1 {
 nav {
     background-color: #dcd7c2;
     text-align: center;
-    padding: 10px 0; 
+    padding: 25px 0; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     width: 100%; 
@@ -120,7 +120,8 @@ main p, .description, .precio {
     flex-direction: column;
     align-items: center;
     width: 250px;
-    padding: 15px;
+    margin: 10px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
@@ -139,6 +140,13 @@ main p, .description, .precio {
     border-radius: 15px;
 }
 
+.article:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
 /* Estilos para el botón de precio */
 .precio {
     font-size: 1.05rem;
@@ -153,6 +161,17 @@ main p, .description, .precio {
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.precio:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.precio:active {
+    background-color: #2E7D32;
+    transform: scale(0.95);
+}
+
 
 /* Estilos del formulario de contacto */
 #contact {
@@ -201,11 +220,19 @@ main p, .description, .precio {
 .form-buttons button[type="submit"] {
     background-color: #4CAF50;
     color: white;
+    
 }
 
 .form-buttons button[type="reset"] {
     background-color: #f44336;
     color: white;
+   
+}
+
+.form-buttons button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 /* Estilos del mapa */
@@ -239,7 +266,160 @@ footer {
 
 footer p {
     font-size: 1.1em;
+    font-weight: bold;
 }
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Botón flotante */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+    background-color: #388E3C;
+}
+
+body.dark-mode {
+    background-color: #645e5e;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode main,
+body.dark-mode footer {
+    background-color: #645e5e;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #4e4d94;
+    color: #e0e0e0;
+}
+
+body.dark-mode h2{
+    color: #e0e0e0;
+}
+body.dark-mode a {
+    color: #80d8ff;
+}
+
+body.dark-mode p{
+    color: #e0e0e0;
+}
+body.dark-mode .precio {
+    background-color: #80d8ff;
+    color: #000000;
+}
+
+body.dark-mode .article {
+    background-color: #41748a;
+    color: #e0e0e0;
+}
+
+body.dark-mode main #contact {
+    background-color: #41748a;
+    color: #e0e0e0
+}
+
+body.dark-mode .darktitulo {
+    color: #e0e0e0
+}
+
+body.dark-mode .map-container {
+    background-color: #41748a;
+    color: #e0e0e0
+}
+
+body.dark-mode .dolar-item{
+    background-color: #41748a;
+}
+
+body.dark-mode .dolar-titulo{
+    color: #e0e0e0;
+}
+
+body.dark-mode .dolar-precio{
+    color: #e0e0e0;
+}
+
+/* Contenedor principal del dólar */
+#contenedorDolares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Elementos individuales */
+.dolar-item {
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo al pasar el mouse */
+.dolar-item:hover {
+    transform: translateY(-5px); /* Mover hacia arriba */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Títulos */
+.dolar-titulo {
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna */
+    font-size: 1.2rem;
+    color: #333; /* Texto oscuro */
+    margin-bottom: 10px;
+}
+
+/* Precios */
+.dolar-precio {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -273,5 +453,15 @@ footer p {
 
     footer p {
         font-size: 0.9em;
+    }
+}
+@media (max-width: 768px) {
+    #contenedorDolares {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dolar-item {
+        width: 90%; /* Ocupa casi todo el ancho */
     }
 }
